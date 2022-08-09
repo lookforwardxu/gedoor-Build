@@ -21,7 +21,7 @@ set_env APP_UPLOAD      $APP_UPLOAD
 set_env SECRETS_MINIFY  $SECRETS_MINIFY 
 set_env SECRETS_RENAME  $SECRETS_RENAME 
 
-LatestTag="3.22.080323"
+LatestTag=$(curl -s $GITHUB_API_LATEST|jq .tag_name -r)
 LatestCheck=$(date -u -d"+8 hour" "+%Y-%m-%d %H:%M:%S")
 
 curl -s $GITHUB_API_LATEST|jq .body -r>/opt/latest.md
