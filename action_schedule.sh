@@ -4,7 +4,7 @@
 function set_env() { echo "$1=$2" >> $GITHUB_ENV; }
 
 APP_NAME="legado"
-APP_GIT_URL="https://github.com/lookforwardxu/gedoor-Build.git"
+APP_GIT_URL="https://github.com/lookforwardxu/legado.git"
 APP_SUFFIX="A"
 APP_WORKSPACE="/opt/$APP_NAME"
 APP_UPLOAD="$APP_WORKSPACE/app/build/outputs/apk/app/release"
