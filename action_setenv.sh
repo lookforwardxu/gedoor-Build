@@ -8,6 +8,7 @@ APP_SUFFIX="A"
 
 if [ $SECRETS_ENABLE = 'true' ] && [ -n "$SECRETS_APP_NAME" ] && [ -n "$SECRETS_GIT_URL" ] && [ $REPO_ACTOR = $REPO_OWNER ]; then
     APP_NAME=$SECRETS_APP_NAME
+    APP_GIT_URL=$SECRETS_GIT_URL
 fi
 
 if [ -n "$SECRETS_SUFFIX" ] && [ $REPO_ACTOR = $REPO_OWNER ]; then
