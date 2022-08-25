@@ -27,6 +27,7 @@ jobs:
         if version_gt $APP_LATEST_TAG $APP_LAST_TAG; then
           git clone $APP_GIT_URL $APP_WORKSPACE
           cd $APP_WORKSPACE
+          git tag $LATEST_TAG
           git checkout $LATEST_TAG 
           echo ::set-output name=if_release::true
         fi
